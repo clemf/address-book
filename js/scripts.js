@@ -18,5 +18,7 @@ $("form#new-contact").submit(function(event) {
     $("#show-contact").show("slow");
   });
 
+  $("#new-contact").trigger("reset");
+
   event.preventDefault();
 });
