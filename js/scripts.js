@@ -1,4 +1,4 @@
-$("#contacts").hide();
+$("#show-contact").hide();
 
 $("form#new-contact").submit(function(event) {
   var firstName = $("input#new-first-name").val(),
@@ -7,11 +7,14 @@ $("form#new-contact").submit(function(event) {
 
   var newContact = { firstName: firstName, lastName: lastName, address: address };
 
+  $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + " "
+    + newContact.lastName + "</span></li>");
+
   $("li#first-name").append(newContact.firstName);
   $("li#last-name").append(newContact.lastName);
   $("li#address").append(newContact.address);
 
-
-  $("#contacts").show("slow");
+// $(".contact").last().click(function())
+  $("#show-contact").show("slow");
   event.preventDefault();
 });
