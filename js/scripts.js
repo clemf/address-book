@@ -10,9 +10,9 @@ $("form#new-contact").submit(function(event) {
   $("ul#contacts").append("<li class='list-group-item'><span class='contact'>" + newContact.firstName + " "
     + newContact.lastName + "</span></li>");
 
-  $("li#first-name").append(newContact.firstName);
-  $("li#last-name").append(newContact.lastName);
-  $("li#address").append(newContact.address);
+  $("li#first-name").text("First Name: " + newContact.firstName);
+  $("li#last-name").text("Last Name: " + newContact.lastName);
+  $("li#address").text("Address: " + newContact.address);
 
   $(".contact").last().click(function() {
     $("#show-contact").show("slow");
