@@ -2,8 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="js/scripts.js"></script>
+
     <title>Address Book</title>
   </head>
   <body>
@@ -30,13 +29,18 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="contacts">
           <h2>Contacts:</h2>
-          <ul id="contacts" class="list-group">
-            <li class="list-group-item">test</li>
+          <ul class="list-group">
+            <li class="list-group-item" id="first-name"></li>
+            <li class="list-group-item" id="last-name"></li>
+            <li class="list-group-item" id="address"></li>
           </ul>
         </div>
 
     </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
