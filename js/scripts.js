@@ -15,6 +15,7 @@ $("form#new-contact").submit(function(event) {
     var stateInput = $(this).find("input.new-state").val();
 
     var newAddress = { street: streetInput, city: cityInput, state: stateInput };
+
     newContact.addresses.push(newAddress);
   });
 
@@ -26,8 +27,8 @@ $("form#new-contact").submit(function(event) {
     $("li#last-name").text("Last Name: " + newContact.lastName);
 
     $("ul#addresses").text("");
-    newContact.forEach(function(address) {
-      ("ul#addresses").append("<li class='list-group-item'>" + address.street + address.city + address.state + "</li>");
+    newContact.addresses.forEach(function(address) {
+      $("ul#addresses").append("<li>" + address.street + address.city + address.state + "</li>");
     });
   });
 
